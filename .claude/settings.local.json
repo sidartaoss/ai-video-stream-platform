@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x:*)",
+      "Bash(./scripts/release.sh:*)",
+      "Bash(./scripts/finalize-release.sh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m 'chore: bump version to v0.1.0:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git merge:*)",
+      "Bash(git commit -m 'docs: add AI development foundations section to README:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
