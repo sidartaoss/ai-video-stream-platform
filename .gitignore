@@ -24,6 +24,4 @@ Thumbs.db
 dist/
 build/
 
-# Auto-generated diagrams (exported by GitHub Actions)
-docs/diagrams/**/*.svg
 

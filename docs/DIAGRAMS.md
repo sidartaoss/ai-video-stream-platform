@@ -2,12 +2,11 @@
 
 ## Como funciona
 
-Este projeto usa **Excalidraw** para criar diagramas técnicos com um workflow automático:
+Este projeto usa **Excalidraw** para criar diagramas técnicos com um workflow manual simples:
 
 1. ✏️ **Você edita** o arquivo `.json` no Excalidraw
-2. 📤 **Você faz push** do arquivo JSON para o repositório
-3. 🤖 **GitHub Actions** converte automaticamente para SVG
-4. 🎨 **SVG é commitado** automaticamente de volta ao repositório
+2. 📤 **Você exporta** para SVG (File → Export → SVG)
+3. 💾 **Você comita** ambos (JSON + SVG) para o repositório
 
 ## Estrutura de pastas
 
@@ -15,33 +14,28 @@ Este projeto usa **Excalidraw** para criar diagramas técnicos com um workflow a
 docs/diagrams/
 ├── step_001/
 │   ├── 001-dinâmica-de-desenvolvimento-do-projeto-greenfield.json
-│   └── 001-dinâmica-de-desenvolvimento-do-projeto-greenfield.svg  (auto-gerado)
+│   └── 001-dinâmica-de-desenvolvimento-do-projeto-greenfield.svg
 ├── step_002/
 │   ├── 002-arquitetura-ia.json
-│   └── 002-arquitetura-ia.svg  (auto-gerado)
+│   └── 002-arquitetura-ia.svg
 └── README.md
 ```
 
-## Workflow automático
+## Workflow manual
 
-O arquivo `.github/workflows/excalidraw-export.yml` faz:
-
-1. **Detecta** quando você faz push de um arquivo `.json` em `docs/diagrams/`
-2. **Converte** o JSON para SVG usando `@excalidraw/cli`
-3. **Committa** o SVG automaticamente com mensagem: `chore: export Excalidraw diagrams to SVG`
+1. **Editar** no Excalidraw (https://excalidraw.com)
+2. **Exportar** para SVG (File → Export → SVG)
+3. **Commitar** ambos os arquivos
 
 ### Exemplo:
 
 ```bash
-# Você faz push do JSON
+# Você edita e exporta no Excalidraw
+# Depois comita ambos:
 git add docs/diagrams/step_001/001-dinâmica.json
+git add docs/diagrams/step_001/001-dinâmica.svg
 git commit -m "update: new diagram"
 git push
-
-# GitHub Actions automaticamente:
-# 1. Converte 001-dinâmica.json → 001-dinâmica.svg
-# 2. Faz commit do SVG
-# 3. Faz push de volta
 ```
 
 ## Como usar
@@ -86,18 +80,10 @@ Os arquivos SVG são renderizados automaticamente no GitHub:
 ![Nome do Diagrama](docs/diagrams/step_001/001-dinâmica.svg)
 ```
 
-## Monitorar a conversão
-
-Acesse a aba **Actions** do repositório para ver:
-
-- ✅ Conversões bem-sucedidas
-- ❌ Erros (se houver)
-- 📋 Logs detalhados de cada execução
-
 ## Formato dos arquivos
 
 - **JSON**: Arquivo editável no Excalidraw (versionar no git)
-- **SVG**: Auto-gerado, escalável, perfeito para web (não versionar manualmente)
+- **SVG**: Exportado manualmente, escalável, perfeito para web (versionar no git)
 
 ## Por que SVG e não PNG?
 
@@ -110,21 +96,16 @@ Acesse a aba **Actions** do repositório para ver:
 
 ## Troubleshooting
 
-### SVG não foi gerado após push?
-
-1. Verifique a aba **Actions** → procure "Export Excalidraw Diagrams"
-2. Clique no workflow e veja os logs
-3. Verifique se o arquivo está em `docs/diagrams/**/*.json`
-
 ### Arquivo JSON corrompido?
 
 - Baixe novamente do Excalidraw
 - Verifique se não tem caracteres especiais no caminho
 
-### Quer desativar o workflow?
+### SVG não está sincronizado com JSON?
 
-- Acesse `.github/workflows/excalidraw-export.yml`
-- Comente a seção `on:` ou delete o arquivo
+- Edite o JSON novamente
+- Exporte para SVG (overwrite o anterior)
+- Comita ambos com a mesma mensagem
 
 ## Referências
 
