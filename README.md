@@ -65,6 +65,122 @@ Ferramentas e recursos de desenvolvimento:
 
 ---
 
+## Fundamentos de Desenvolvimento com IA
+
+### Abordagem Engenheirada vs Apressada
+
+Este projeto adota uma **abordagem engenheirada** para desenvolvimento com IA, fundamentada em padrões e boas práticas:
+
+**❌ O que evitamos:**
+- Prompts prontos sem contexto
+- Ciclos infinitos de correção manual
+- Código inconsistente e alucinações de IA
+- Ausência de fundações sólidas
+
+**✅ O que praticamos:**
+- Criação de fundações robustas desde o início
+- Definição clara de contexto e padrões
+- Prompts estruturados e bem elaborados
+- Escolha adequada de modelos e ferramentas
+- Arquitetura planejada e documentada
+
+### Dinâmica Incremental de Desenvolvimento
+
+O projeto segue uma estratégia de desenvolvimento **passo a passo**, priorizando compreensão e clareza:
+
+1. **Backend com NestJS** - Fundação da API e lógica de negócio
+2. **Fundação de IA no Backend** - Preparar infraestrutura para IA
+3. **Funcionalidades do Backend** - Implementar features com suporte a IA
+4. **Frontend com Next.js** - Construir interface do usuário
+5. **Fundação de IA no Frontend** - Integrar IA na camada de apresentação
+6. **Full Stack Integration** - Testar fluxos completos end-to-end
+
+Esta abordagem evita sobrecarga e garante qualidade arquitetural em cada etapa.
+
+### Artefatos Claude Code para Fundação de IA
+
+A fundação de IA é estruturada através de 4 artefatos principais:
+
+#### 1. **CLAUDE.md - Contexto Global do Projeto**
+
+Arquivo principal que define:
+- Práticas de Git e estrutura de pastas
+- Padrões de código e nomenclatura
+- Comandos e workflows globais
+- Filosofia de desenvolvimento
+
+Para monorepos, suportamos contextos aninhados:
+- `CLAUDE.md` - Contexto global
+- `apps/backend/CLAUDE.md` - Contexto do backend
+- `apps/frontend/CLAUDE.md` - Contexto do frontend
+
+Carregamento automático apenas quando necessário, otimizando contexto.
+
+#### 2. **CLAUDE Rules - Contextos Delimitados**
+
+Rules permitem definir padrões estruturados para áreas específicas:
+
+```
+Exemplos de use cases:
+- Padrões de testes unitários
+- Estrutura da camada de serviços
+- Convenções da camada de API
+- Padrões de tratamento de erros
+```
+
+Otimizam a janela de contexto carregada, focando apenas no necessário.
+
+#### 3. **Skills - Automações e Workflows**
+
+Skills encapsulam tarefas repetitivas:
+
+- **Modo Convencional**: Carregadas automaticamente conforme contexto
+- **User Commands**: Invocadas manualmente com `/comando`
+
+Exemplos:
+- `/release` - Criar release automática
+- `/test` - Rodar suite de testes
+- `/build` - Build do projeto
+
+#### 4. **MCP Servers - Integração de Ferramentas**
+
+Servidores MCP (Model Context Protocol) adicionam:
+
+- Contexto adicional ao projeto
+- Integração com APIs externas
+- Ferramentas especializadas
+- Automações complexas
+
+### Estratégia de Prompts Estruturados
+
+Todos os prompts seguem uma estrutura clara:
+
+1. **Contexto** - Situação atual do projeto
+2. **Objetivo** - O que precisa ser feito
+3. **Restrições** - Limitações e padrões
+4. **Formato** - Como o resultado deve ser apresentado
+5. **Exemplos** - Casos de uso relevantes
+
+Isso resulta em:
+- ✅ Consistência no código gerado
+- ✅ Redução de alucinações
+- ✅ Melhor compreensão da IA sobre o projeto
+- ✅ Resultados previsíveis e de qualidade
+
+### Paralelo com Desenvolvimento Tradicional
+
+O processo com IA segue princípios semelhantes ao desenvolvimento tradicional:
+
+| Aspecto | Tradicional | Com IA |
+|--------|-------------|--------|
+| **Arquitetura** | Planejada desde o início | Planejada desde o início |
+| **Padrões** | Definidos e documentados | Definidos e documentados |
+| **Componentes** | Estruturados | Estruturados com contexto IA |
+| **Boas Práticas** | Aplicadas sistematicamente | Aplicadas via prompts estruturados |
+| **Qualidade** | Resultado de disciplina | Resultado de fundação sólida + IA |
+
+---
+
 ## Problema
 
 Plataformas modernas de vídeo exigem mais do que armazenamento e reprodução.
