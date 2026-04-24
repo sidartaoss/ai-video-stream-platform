@@ -2,7 +2,7 @@
 
 Plataforma de streaming de vídeos com suporte a Inteligência Artificial, construída com arquitetura orientada a eventos e preparada para alta escalabilidade.
 
-![version](https://img.shields.io/badge/version-v0.1.0-blue)
+![version](https://img.shields.io/badge/version-v0.1.1-blue)
 ![status](https://img.shields.io/badge/status-foundation-green)
 
 Projeto greenfield com foco em aprendizado avançado, simulando um cenário real de construção de uma plataforma moderna de vídeo.
