@@ -10,7 +10,9 @@
       "Bash(git checkout:*)",
       "Bash(git pull:*)",
       "Bash(git stash:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git commit -m 'docs: add AI development foundations section to README:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
