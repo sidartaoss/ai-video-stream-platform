@@ -9,6 +9,62 @@ Projeto greenfield com foco em aprendizado avançado, simulando um cenário real
 
 ---
 
+## Tópicos Principais - v0.1.0
+
+### 1. **Projeto Prático - Workflow Base - Fundamentos**
+
+Construção de uma fundação sólida com padrões de desenvolvimento escaláveis:
+
+* Gitflow com branches `main`, `develop` e `feature/*`
+* Proteção de branches com requisitos de code review
+* Padrões de commit estruturados
+* Configuração de workflows automáticos
+
+### 2. **Arquitetura do Projeto - AI Video Stream Platform**
+
+Visão geral completa da arquitetura distribuída:
+
+* Componentes principais (Frontend, API, Workers)
+* Padrão orientado a eventos com message queue
+* Armazenamento escalável e desacoplado
+* Integração de IA na pipeline de processamento
+
+Veja detalhes completos em: [Arquitetura](#visão-geral-da-arquitetura)
+
+### 3. **Dinâmica de Desenvolvimento do Projeto Greenfield**
+
+Metodologia e processo de desenvolvimento:
+
+* Estratégia de implementação incremental
+* Foco em qualidade arquitetural desde o início
+* Preparação para integração de IA em cada camada
+* Documentação visual com diagramas Excalidraw
+
+Saiba mais em: [`docs/DIAGRAMS.md`](docs/DIAGRAMS.md)
+
+### 4. **Nossos Workflows de Desenvolvimento com IA**
+
+Integração estruturada de Inteligência Artificial:
+
+* Backend: Processamento de vídeos com IA
+* Enriquecimento de metadados
+* Recomendações inteligentes
+* Busca e ranking com ML
+
+Veja roadmap: [Estratégia de Desenvolvimento com IA](#estratégia-de-desenvolvimento-com-ia)
+
+### 5. **Artefatos do Claude Code que Vamos Usar**
+
+Ferramentas e recursos de desenvolvimento:
+
+* **Claude Code CLI**: Automação de tarefas repetitivas
+* **GitHub Actions**: Workflows automáticos de export de diagramas
+* **Git Workflow**: Integração com gitflow e branch protection
+* **Code Review**: Assistência com análise de código
+* **Documentação**: Geração e manutenção de docs
+
+---
+
 ## Problema
 
 Plataformas modernas de vídeo exigem mais do que armazenamento e reprodução.
