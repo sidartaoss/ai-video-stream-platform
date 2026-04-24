@@ -71,13 +71,13 @@ Ferramentas e recursos de desenvolvimento:
 
 Este projeto adota uma **abordagem engenheirada** para desenvolvimento com IA, fundamentada em padrões e boas práticas:
 
-**❌ O que evitamos:**
+O que evitamos:
 - Prompts prontos sem contexto
 - Ciclos infinitos de correção manual
 - Código inconsistente e alucinações de IA
 - Ausência de fundações sólidas
 
-**✅ O que praticamos:**
+O que praticamos:
 - Criação de fundações robustas desde o início
 - Definição clara de contexto e padrões
 - Prompts estruturados e bem elaborados
@@ -162,10 +162,10 @@ Todos os prompts seguem uma estrutura clara:
 5. **Exemplos** - Casos de uso relevantes
 
 Isso resulta em:
-- ✅ Consistência no código gerado
-- ✅ Redução de alucinações
-- ✅ Melhor compreensão da IA sobre o projeto
-- ✅ Resultados previsíveis e de qualidade
+- Consistência no código gerado
+- Redução de alucinações
+- Melhor compreensão da IA sobre o projeto
+- Resultados previsíveis e de qualidade
 
 ### Paralelo com Desenvolvimento Tradicional
 
@@ -177,7 +177,7 @@ O processo com IA segue princípios semelhantes ao desenvolvimento tradicional:
 | **Padrões** | Definidos e documentados | Definidos e documentados |
 | **Componentes** | Estruturados | Estruturados com contexto IA |
 | **Boas Práticas** | Aplicadas sistematicamente | Aplicadas via prompts estruturados |
-| **Qualidade** | Resultado de disciplina | Resultado de fundação sólida + IA |
+| **Qualidade** | Resultado de disciplina | Resultado de fundação sólida com IA |
 
 ---
 
