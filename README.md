@@ -2,7 +2,7 @@
 
 Plataforma de streaming de vídeos com suporte a Inteligência Artificial, construída com arquitetura orientada a eventos e preparada para alta escalabilidade.
 
-![version](https://img.shields.io/badge/version-v0.1.1-blue)
+![version](https://img.shields.io/badge/version-v0.2.0-blue)
 ![status](https://img.shields.io/badge/status-foundation-green)
 
 Projeto greenfield com foco em aprendizado avançado, simulando um cenário real de construção de uma plataforma moderna de vídeo.
@@ -62,6 +62,92 @@ Ferramentas e recursos de desenvolvimento:
 * **Git Workflow**: Integração com gitflow e branch protection
 * **Code Review**: Assistência com análise de código
 * **Documentação**: Geração e manutenção de docs
+
+---
+
+## Tópicos Principais - v0.2.0
+
+### 1. **Criação do Projeto Backend com NestJS**
+
+Scaffold do projeto backend usando o CLI oficial do NestJS (`@nestjs/cli`):
+
+* Geração do projeto com `nest new`, garantindo versões atualizadas do framework
+* Alerta sobre os riscos de gerar projetos automaticamente por IA sem validação de versão
+* Validação inicial com `npm run start:dev` e teste do endpoint padrão
+
+### 2. **Configuração do Ambiente com Docker**
+
+Isolamento completo do ambiente de desenvolvimento via Docker Compose:
+
+* Container da API NestJS (Node 22 slim) com volume sincronizado e porta 3000
+* Container PostgreSQL 17 com health check e credenciais configuradas
+* Ambiente efêmero e replicável, eliminando dependências na máquina local
+* Preparado para automações por IA com execução de comandos dentro dos containers
+
+### 3. **Prova dos Noves — Riscos da IA sem Fundação**
+
+Demonstração prática dos problemas ao usar IA sem contexto estruturado:
+
+* Bibliotecas depreciadas (ex: Passport em versão antiga, serviço de e-mail obsoleto)
+* Testes superficiais com 425 linhas improdutivas baseadas apenas em mocks
+* Login mal implementado com parâmetros inadequados
+* Débitos técnicos instantâneos — 3 minutos de geração, dias de correção
+
+### 4. **Arquitetura da Fundação de IA**
+
+Definição da estrutura completa de artefatos para desenvolvimento assistido por IA:
+
+* **Carregamento automático:** CLAUDE.md global, sub CLAUDE.md e rules de convenções
+* **Skills sob demanda:** Boas práticas NestJS, TypeORM e guia de testes
+* **User commands:** Gerador de test guide, planejador de fase e pesquisa dedicada
+* **MCPs:** Context7 (documentação) e PostgreSQL (consultas ao banco)
+
+### 5. **CLAUDE.md Global e Sub CLAUDE.md**
+
+Organização do contexto em camadas para monorepo:
+
+* CLAUDE.md raiz enxuto (<200 linhas) com informações globais: arquitetura, Git Flow, princípios e padrões
+* Sub CLAUDE.md no `nestjs-project/` com comandos Docker, convenções específicas e fluxos de desenvolvimento
+* Separação clara de responsabilidades entre contexto global e contexto de subprojeto
+* Revisão contínua conforme o projeto evolui
+
+### 6. **Claude Rules — Convenções de Código**
+
+9 arquivos de regras na pasta `.claude/rules/` para padronização:
+
+* Convenções gerais TypeScript (nomenclatura, tipagem, injeção de dependência)
+* Controllers RESTful (decorators HTTP, rotas no plural, sub-recursos)
+* DTOs (nomenclatura por operação, decoradores de validação)
+* Entidades TypeORM (UUID como primary key, relacionamentos, colunas unique)
+* Separação de camadas (controllers enxutos, lógica nos services)
+* Testes (padrão AAA, factories/builders, limpeza de banco em integração)
+
+### 7. **Curadoria e Configuração de Skills**
+
+Processo criterioso de avaliação e instalação de skills:
+
+* Instalação via cópia tradicional (não symlink) para compatibilidade com Claude Code
+* Modularização de skills grandes (ex: TypeORM de 600 para 72 linhas com 16 sub-regras)
+* Checklist de avaliação: segurança, impacto no contexto, compatibilidade com o projeto
+* Descrições otimizadas (~87 tokens) com critérios claros de ativação
+
+### 8. **Alinhamento entre Rules e Skills**
+
+Validação cruzada para garantir consistência:
+
+* Análise de 9 rules contra 56 itens de skills para identificar contradições
+* Correção de 7 contradições (ex: estratégia de primary key, loading de relacionamentos, responsabilidades do controller)
+* Geração de plano de correções iterado até eliminação total de conflitos
+* Processo replicável para qualquer framework ou especificação
+
+### 9. **Servidores MCP — Context7 e PostgreSQL**
+
+Integração com ferramentas externas via Model Context Protocol:
+
+* **Context7:** Consulta automatizada de documentação oficial com verificação de versão instalada
+* **MCP PostgreSQL:** Consultas ao banco de dados via linguagem natural durante o desenvolvimento
+* Carregamento sob demanda de tools para otimizar o contexto
+* Regra global: sempre consultar documentação antes de implementar funcionalidades
 
 ---
 
@@ -211,7 +297,7 @@ Esta plataforma implementa uma arquitetura distribuída que:
 
 ## Arquitetura
 
-![Arquitetura do Sistema](docs/diagrams/software-arch.png)
+![Arquitetura do Sistema](docs/diagrams/software-arch.mermaid)
 
 ---
 
@@ -351,10 +437,12 @@ A aplicação estará disponível em:
 
 ## Roadmap
 
-### v0.2.0
+### v0.2.0 (concluída)
 
-* Enriquecimento de metadados com IA
-* Recomendações de vídeos
+* Fundação de IA para o projeto backend
+* Configuração de CLAUDE.md, rules, skills e servidores MCP
+* Ambiente Docker isolado para desenvolvimento com IA
+* Curadoria e alinhamento de artefatos de contexto
 
 ### v0.3.0
 
